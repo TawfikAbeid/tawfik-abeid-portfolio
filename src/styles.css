@@ -124,6 +124,19 @@
   }
 }
 
+/* Oversized editorial section heading. */
+@utility display-h2 {
+  font-size: clamp(2.75rem, 8vw, 6.5rem);
+  line-height: 0.96;
+  letter-spacing: -0.028em;
+}
+
+@utility display-h3 {
+  font-size: clamp(1.5rem, 3.4vw, 2.75rem);
+  line-height: 1.04;
+  letter-spacing: -0.02em;
+}
+
 @utility eyebrow {
   font-size: 0.6875rem;
   letter-spacing: 0.22em;
