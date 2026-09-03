@@ -1,24 +1,46 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Nav } from "@/components/site/Nav";
+import { Hero } from "@/components/site/Hero";
+import { About } from "@/components/site/About";
+import { Affiliations } from "@/components/site/Affiliations";
+import { Journey } from "@/components/site/Journey";
+import { Credentials } from "@/components/site/Credentials";
+import { Gallery } from "@/components/site/Gallery";
+import { Skills } from "@/components/site/Skills";
+import { Contact } from "@/components/site/Contact";
+import { Footer } from "@/components/site/Footer";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+const title = "Tawfik Abeid — Law Student & Community Leader";
+const description =
+  "Editorial portfolio of Tawfik Abeid: LLB candidate at Cairo University, community leader, and program & operations intern based in Giza, Egypt.";
+
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title },
+      { name: "description", content: description },
+      { property: "og:title", content: title },
+      { property: "og:description", content: description },
+      { property: "og:type", content: "profile" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <main className="scroll-smooth">
+      <Nav />
+      <Hero />
+      <About />
+      <Affiliations />
+      <Journey />
+      <Credentials />
+      <Gallery />
+      <Skills />
+      <Contact />
+      <Footer />
+    </main>
   );
 }
