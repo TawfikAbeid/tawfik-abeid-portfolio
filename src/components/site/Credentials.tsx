@@ -108,8 +108,6 @@ export function Credentials() {
                   </span>
                 )}
               </div>
-
-              </div>
             </Reveal>
           ))}
         </ul>
