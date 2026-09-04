@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react";
 import { ArrowUpRight, X } from "lucide-react";
-import { gallery } from "@/data/portfolio";
+import { archiveGallery, gallery } from "@/data/portfolio";
+
+const allItems = [...gallery, ...archiveGallery];
 
 export function Gallery() {
   const [index, setIndex] = useState<number | null>(null);
-  const item = index === null ? null : gallery[index];
+  const item = index === null ? null : allItems[index];
+
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
