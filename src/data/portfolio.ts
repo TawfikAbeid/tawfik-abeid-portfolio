@@ -5,6 +5,26 @@ import eventAsset from "@/assets/Gemini_Generated_Image_1xhh5c1xhh5c1xhh.jpg.ass
 import banner1Asset from "@/assets/Picsart_23-08-23_07-28-06-198.jpg.asset.json";
 import banner2Asset from "@/assets/Picsart_23-08-23_07-43-55-416.jpg.asset.json";
 
+/* --- Batch uploaded September 2026: certificates, badges, brand banner --- */
+import cibCertThumb from "@/assets/cib-certificate.jpg.asset.json";
+import cibCertFull from "@/assets/cib-certificate-original.jpg.asset.json";
+import mintCertThumb from "@/assets/mint-ambassador-certificate.jpg.asset.json";
+import mintCertFull from "@/assets/mint-ambassador-certificate-original.jpg.asset.json";
+import mintCertPdf from "@/assets/mint-ambassador-certificate.pdf.asset.json";
+import iihlCertThumb from "@/assets/forced-displacement-certificate.jpg.asset.json";
+import iihlCertFull from "@/assets/forced-displacement-certificate-original.jpg.asset.json";
+import iihlCertPdf from "@/assets/forced-displacement-certificate.pdf.asset.json";
+import clBadgeThumb from "@/assets/aspire-community-leader-badge.png.asset.json";
+import clBadgeFull from "@/assets/aspire-community-leader-badge-original.png.asset.json";
+import dlBadgeThumb from "@/assets/aspire-domain-leader-badge.png.asset.json";
+import dlBadgeFull from "@/assets/aspire-domain-leader-badge-original.png.asset.json";
+import majlisBadgeThumb from "@/assets/majlis-badge.png.asset.json";
+import majlisBadgeFull from "@/assets/majlis-badge-original.png.asset.json";
+import signatureBannerThumb from "@/assets/signature-banner.jpg.asset.json";
+import signatureBannerFull from "@/assets/signature-banner-original.jpg.asset.json";
+import myStoryCover from "@/assets/my-story-cover.jpg.asset.json";
+import myStoryPdf from "@/assets/tawfik-abeid-my-story.pdf.asset.json";
+
 export const images = {
   hero: heroAsset.url,
   portrait: portraitAsset.url,
@@ -14,8 +34,73 @@ export const images = {
   banner2: banner2Asset.url,
 };
 
+/**
+ * Uploaded documents and badges.
+ * `thumb` = optimized image used on the website.
+ * `original` = untouched uploaded file, preserved and still served.
+ */
+export const media = {
+  cibCertificate: { thumb: cibCertThumb.url, original: cibCertFull.url },
+  mintCertificate: {
+    thumb: mintCertThumb.url,
+    original: mintCertFull.url,
+    pdf: mintCertPdf.url,
+  },
+  forcedDisplacementCertificate: {
+    thumb: iihlCertThumb.url,
+    original: iihlCertFull.url,
+    pdf: iihlCertPdf.url,
+  },
+  aspireCommunityLeaderBadge: { thumb: clBadgeThumb.url, original: clBadgeFull.url },
+  aspireDomainLeaderBadge: { thumb: dlBadgeThumb.url, original: dlBadgeFull.url },
+  majlisBadge: { thumb: majlisBadgeThumb.url, original: majlisBadgeFull.url },
+  signatureBanner: {
+    thumb: signatureBannerThumb.url,
+    original: signatureBannerFull.url,
+  },
+  myStory: { thumb: myStoryCover.url, pdf: myStoryPdf.url },
+};
+
+/**
+ * Academic documents (transcript and official yearly results) were uploaded but are
+ * intentionally NOT published: they contain a national ID, seat numbers and grades.
+ * The Education section below shows only non-sensitive study information.
+ */
+export const academicDocumentsPolicy =
+  "Uploaded academic documents are kept private. Only degree and study information is shown.";
+
+export type EducationEntry = {
+  institution: string;
+  qualification: string;
+  period: string;
+  detail?: string;
+};
+
+export const education: EducationEntry[] = [
+  {
+    institution: "Cairo University — Faculty of Law",
+    qualification: "Bachelor of Laws (LLB)",
+    period: "2022 — 2026",
+    detail: "Arabic section. Full-time, regular enrolment.",
+  },
+  {
+    institution: "International Institute of Humanitarian Law — Sanremo",
+    qualification:
+      "2nd Online Course on Forced Displacement for Students and Junior Professionals",
+    period: "9 — 27 February 2026",
+    detail: "Department of International Refugee Law and Migration Law.",
+  },
+  {
+    institution: "Aspire Institute",
+    qualification: "Aspire Leaders Program",
+    period: "2024",
+    detail: "30 hours of coursework across the three programme phases.",
+  },
+];
+
 /** TODO: replace with a real hosted CV file when available. */
 export const CV_URL = "#cv-placeholder";
+
 
 export type ExperienceKind =
   | "Volunteer"
@@ -58,7 +143,7 @@ export const experiences: Experience[] = [
     ],
     thumbnail: null,
     gallery: [],
-    certificateImage: null,
+    certificateImage: media.aspireCommunityLeaderBadge.thumb,
     linkedInPost: null,
     organizationUrl: "https://aspireinstitute.org/",
     learned:
@@ -133,7 +218,7 @@ export const experiences: Experience[] = [
     ],
     thumbnail: null,
     gallery: [],
-    certificateImage: null,
+    certificateImage: media.aspireDomainLeaderBadge.thumb,
     linkedInPost: null,
     organizationUrl: "https://aspireinstitute.org/",
     learned:
@@ -208,7 +293,7 @@ export const experiences: Experience[] = [
     ],
     thumbnail: null,
     gallery: [],
-    certificateImage: null,
+    certificateImage: media.cibCertificate.thumb,
     linkedInPost: null,
     organizationUrl: "https://www.cibeg.com/",
     learned:
@@ -227,7 +312,7 @@ export const experiences: Experience[] = [
     ],
     thumbnail: null,
     gallery: [],
-    certificateImage: null,
+    certificateImage: media.mintCertificate.thumb,
     linkedInPost: null,
     organizationUrl: "https://www.egbank.com/",
     learned: "Persuasion is preparation — knowing the other person's problem first.",
@@ -301,20 +386,53 @@ export type Credential = {
   issuer: string;
   date: string;
   category: Exclude<CredentialCategory, "All">;
-  /** TODO: add certificate image URL. */
+  /** Credential type as printed on the document, when known. */
+  credentialType?: string;
+  /** Optimized image shown on the site. */
   image: string | null;
-  /** TODO: add credential verification URL. */
+  /** Untouched original upload, preserved. */
+  imageOriginal?: string | null;
+  /** Uploaded PDF of the certificate, when provided. */
+  document?: string | null;
+  /** TODO: add credential verification URL (none visible on the documents). */
   url: string | null;
+  /** Matching entry in `experiences`, when confirmed. */
+  relatedExperienceId?: string | null;
+  needsReview?: boolean;
 };
 
 export const credentials: Credential[] = [
   {
     title: "Aspire Leaders Program — Certificate of Completion",
     issuer: "Aspire Institute",
-    date: "2024",
+    date: "August 2024",
     category: "Leadership",
+    credentialType: "Certificate of completion",
     image: null,
     url: null,
+    relatedExperienceId: "aspire-leaders-fellow",
+  },
+  {
+    title: "Community Leader Badge — Aspire Volunteer Program",
+    issuer: "Aspire Institute",
+    date: "2026",
+    category: "Leadership",
+    credentialType: "Digital badge",
+    image: media.aspireCommunityLeaderBadge.thumb,
+    imageOriginal: media.aspireCommunityLeaderBadge.original,
+    url: null,
+    relatedExperienceId: "aspire-community-leader-giza",
+  },
+  {
+    title: "Domain Leader Badge — Aspire Volunteer Program",
+    issuer: "Aspire Institute",
+    date: "2026",
+    category: "Leadership",
+    credentialType: "Digital badge",
+    image: media.aspireDomainLeaderBadge.thumb,
+    imageOriginal: media.aspireDomainLeaderBadge.original,
+    url: null,
+    relatedExperienceId: "aspire-community-domain-leader",
   },
   {
     title: "Certificate of Service",
@@ -325,11 +443,16 @@ export const credentials: Credential[] = [
     url: null,
   },
   {
-    title: "Forced Displacement Course",
-    issuer: "International Institute of Humanitarian Law, Sanremo",
-    date: "Date to be added",
+    title:
+      "2nd Online Course on Forced Displacement for Students and Junior Professionals",
+    issuer:
+      "International Institute of Humanitarian Law, Sanremo — Department of International Refugee Law and Migration Law",
+    date: "9 — 27 February 2026",
     category: "Legal & International",
-    image: null,
+    credentialType: "Certificate of participation",
+    image: media.forcedDisplacementCertificate.thumb,
+    imageOriginal: media.forcedDisplacementCertificate.original,
+    document: media.forcedDisplacementCertificate.pdf,
     url: null,
   },
   {
@@ -339,6 +462,7 @@ export const credentials: Credential[] = [
     category: "Legal & International",
     image: null,
     url: null,
+    relatedExperienceId: "soliya-global-circles",
   },
   {
     title: "AI Career Essentials",
@@ -365,12 +489,27 @@ export const credentials: Credential[] = [
     url: null,
   },
   {
-    title: "MINT Ambassador",
+    title: 'CIB Summer Bootcamp — "Human-Centric Interpersonal Skills"',
+    issuer: "Commercial International Bank (CIB) Egypt with Frankfurt School",
+    date: "August 2024",
+    category: "Banking & Professional Development",
+    credentialType: "Certificate of attendance",
+    image: media.cibCertificate.thumb,
+    imageOriginal: media.cibCertificate.original,
+    url: null,
+    relatedExperienceId: "cib-summer-internship",
+  },
+  {
+    title: "MINT Ambassador — 4 Days Program",
     issuer: "iCareer × EG BANK",
     date: "2024",
     category: "Banking & Professional Development",
-    image: null,
+    credentialType: "Certificate of completion",
+    image: media.mintCertificate.thumb,
+    imageOriginal: media.mintCertificate.original,
+    document: media.mintCertificate.pdf,
     url: null,
+    relatedExperienceId: "icareer-egbank-trainee",
   },
   {
     title: "Introduction to Blockchain Technology",
@@ -389,6 +528,11 @@ export type GalleryItem = {
   /** TODO: add related external link. */
   link?: string | null;
   span?: "tall" | "wide" | "normal";
+  /** "Archive" items are unconfirmed uploads kept for later review. */
+  group?: "Portfolio" | "Archive";
+  /** Untouched original upload, preserved. */
+  original?: string;
+  needsReview?: boolean;
 };
 
 export const gallery: GalleryItem[] = [
@@ -426,6 +570,37 @@ export const gallery: GalleryItem[] = [
     caption: "On site at an event venue",
   },
 ];
+
+/** Uploaded items with no confirmed match yet. Kept, not discarded. */
+export const archiveGallery: GalleryItem[] = [
+  {
+    src: media.signatureBanner.thumb,
+    original: media.signatureBanner.original,
+    alt: "Desk banner with the handwritten signature of Tawfik Abeid",
+    caption: "Personal signature banner",
+    span: "wide",
+    group: "Archive",
+    needsReview: true,
+  },
+  {
+    src: media.majlisBadge.thumb,
+    original: media.majlisBadge.original,
+    alt: "Badge graphic reading MAJLIS",
+    caption: "Majlis badge — organization and date to be confirmed",
+    group: "Archive",
+    needsReview: true,
+  },
+  {
+    src: media.myStory.thumb,
+    alt: "Cover page of the personal presentation titled My Story",
+    caption: '"My Story" presentation cover',
+    link: media.myStory.pdf,
+    span: "tall",
+    group: "Archive",
+    needsReview: true,
+  },
+];
+
 
 export const skills = [
   {

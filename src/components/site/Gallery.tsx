@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react";
 import { ArrowUpRight, X } from "lucide-react";
-import { gallery } from "@/data/portfolio";
+import { archiveGallery, gallery } from "@/data/portfolio";
+
+const allItems = [...gallery, ...archiveGallery];
 
 export function Gallery() {
   const [index, setIndex] = useState<number | null>(null);
-  const item = index === null ? null : gallery[index];
+  const item = index === null ? null : allItems[index];
+
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -57,9 +60,49 @@ export function Gallery() {
           ))}
         </div>
 
+        <h3 className="mt-24 border-t border-border pt-10 font-serif text-[clamp(1.35rem,2.4vw,2rem)]">
+          Archive
+        </h3>
+        <p className="mt-4 max-w-[58ch] text-sm text-muted-foreground">
+          Uploaded items kept on record while their details are confirmed.
+        </p>
+
+        <div className="mt-10 columns-1 gap-4 sm:columns-2 lg:columns-3 [&>*]:mb-4">
+          {archiveGallery.map((g, i) => (
+            <figure key={g.src + i} className="break-inside-avoid">
+              <button
+                onClick={() => setIndex(gallery.length + i)}
+                className="group relative block w-full overflow-hidden rounded-sm"
+                aria-label={`Open image: ${g.alt}`}
+              >
+                <img
+                  src={g.src}
+                  alt={g.alt}
+                  loading="lazy"
+                  decoding="async"
+                  className={`w-full object-cover transition-transform duration-700 [transition-timing-function:cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.03] ${
+                    g.span === "tall"
+                      ? "aspect-[3/4]"
+                      : g.span === "wide"
+                        ? "aspect-[4/3]"
+                        : "aspect-square"
+                  }`}
+                />
+              </button>
+              {g.caption && (
+                <figcaption className="mt-2 text-xs text-muted-foreground">
+                  {g.caption}
+                  {g.needsReview && " · needs confirmation"}
+                </figcaption>
+              )}
+            </figure>
+          ))}
+        </div>
+
         <p className="mt-10 text-xs text-muted-foreground">
           More photographs and captions can be added to this archive at any time.
         </p>
+
       </div>
 
       {item && (
