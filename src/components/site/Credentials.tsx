@@ -63,7 +63,25 @@ export function Credentials() {
                   </h3>
                   <p className="mt-3 text-sm text-muted-foreground">
                     {c.issuer} · {c.date} · <span className="italic">{c.category}</span>
+                    {c.credentialType ? ` · ${c.credentialType}` : ""}
                   </p>
+                  {c.image && (
+                    <a
+                      href={c.imageOriginal ?? c.image}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-6 block w-full max-w-[320px] overflow-hidden border border-border"
+                      aria-label={`Open the ${c.title} document`}
+                    >
+                      <img
+                        src={c.image}
+                        alt={`${c.title} issued by ${c.issuer}`}
+                        loading="lazy"
+                        decoding="async"
+                        className="w-full object-contain transition-transform duration-700 [transition-timing-function:cubic-bezier(0.22,1,0.36,1)] hover:scale-[1.02]"
+                      />
+                    </a>
+                  )}
                 </div>
 
                 {c.url ? (
@@ -75,11 +93,22 @@ export function Credentials() {
                   >
                     View credential <ArrowUpRight className="h-4 w-4" />
                   </a>
+                ) : c.document ? (
+                  <a
+                    href={c.document}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="rule-link inline-flex shrink-0 items-center gap-2 text-xs tracking-[0.18em] uppercase"
+                  >
+                    View document <ArrowUpRight className="h-4 w-4" />
+                  </a>
                 ) : (
                   <span className="shrink-0 text-xs text-muted-foreground">
                     Credential link to be added
                   </span>
                 )}
+              </div>
+
               </div>
             </Reveal>
           ))}
