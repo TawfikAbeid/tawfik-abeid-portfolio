@@ -143,7 +143,7 @@ export const experiences: Experience[] = [
     ],
     thumbnail: null,
     gallery: [],
-    certificateImage: null,
+    certificateImage: media.aspireCommunityLeaderBadge.thumb,
     linkedInPost: null,
     organizationUrl: "https://aspireinstitute.org/",
     learned:
@@ -218,7 +218,7 @@ export const experiences: Experience[] = [
     ],
     thumbnail: null,
     gallery: [],
-    certificateImage: null,
+    certificateImage: media.aspireDomainLeaderBadge.thumb,
     linkedInPost: null,
     organizationUrl: "https://aspireinstitute.org/",
     learned:
@@ -293,7 +293,7 @@ export const experiences: Experience[] = [
     ],
     thumbnail: null,
     gallery: [],
-    certificateImage: null,
+    certificateImage: media.cibCertificate.thumb,
     linkedInPost: null,
     organizationUrl: "https://www.cibeg.com/",
     learned:
@@ -312,7 +312,7 @@ export const experiences: Experience[] = [
     ],
     thumbnail: null,
     gallery: [],
-    certificateImage: null,
+    certificateImage: media.mintCertificate.thumb,
     linkedInPost: null,
     organizationUrl: "https://www.egbank.com/",
     learned: "Persuasion is preparation — knowing the other person's problem first.",
