@@ -38,7 +38,7 @@ export function Hero() {
             className="animate-reveal mt-6 max-w-md text-sm text-ivory/75 md:text-base"
             style={{ animationDelay: "0.45s" }}
           >
-            Law Student · Community Leader · Program &amp; Operations Intern
+            Fresh Law Graduate · Community Leader · Legal Operations &amp; Compliance
           </p>
           <p
             className="animate-reveal mt-6 max-w-xl font-serif text-[clamp(1.15rem,2.3vw,1.75rem)] leading-snug text-ivory italic"

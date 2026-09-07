@@ -25,11 +25,11 @@ export function About() {
           <Reveal delay={0.12} className="md:pt-10">
             <div className="space-y-8 text-[1.0625rem] leading-[1.85] text-foreground/80">
               <p className="font-serif text-[clamp(1.35rem,2.2vw,1.95rem)] leading-[1.35] text-foreground italic">
-                Tawfik is a fourth-year LLB candidate at Cairo University Faculty of Law,
-                expected to graduate in 2026.
+                Tawfik is a fresh law graduate of Cairo University Faculty of Law,
+                graduated in June 2026.
               </p>
               <p>
-                His studies centre on legal research, civil procedure, and contract law — the
+                His studies centred on legal research, civil procedure, and contract law — the
                 slower, more careful side of the discipline.
               </p>
               <p>
@@ -43,8 +43,8 @@ export function About() {
             <dl className="mt-20 grid gap-x-10 gap-y-10 border-t border-border pt-10 sm:grid-cols-3">
               {[
                 { k: "Based in", v: "Giza, Egypt" },
-                { k: "Studying", v: "LLB, Cairo University" },
-                { k: "Expected", v: "Graduation 2026" },
+                { k: "Qualification", v: "LLB, Cairo University" },
+                { k: "Graduated", v: "June 2026" },
               ].map((i) => (
                 <div key={i.k}>
                   <dt className="eyebrow text-muted-foreground">{i.k}</dt>

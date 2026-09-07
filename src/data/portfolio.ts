@@ -23,6 +23,7 @@ export const images = {
   workshopsTeamNew: m("1747295971622-c0b4ec05-af58-4fe3-90f9-682689593286.jpg"),
   herMarkTeam: m("1761327268122-827322fc-19de-4745-b32c-bb4471704cac.jpg"),
   gemNightTeam: m("1772089628422.jpeg"),
+  gem: m("1772089628422.jpeg"),
 };
 
 export const media = {
@@ -102,7 +103,7 @@ export const education: EducationEntry[] = [
   },
 ];
 
-export const CV_URL = "/CV_LawFirm_Tawfik_Abeid.docx.pdf";
+export const CV_URL = "/media/Tawfik_Abeid_CV_2v.docx.pdf";
 
 export type ExperienceKind =
   | "Volunteer"
@@ -418,6 +419,7 @@ export type Credential = {
   category: Exclude<CredentialCategory, "All">;
   credentialType?: string;
   image: string | null;
+  imageOriginal?: string | null;
   document?: string | null;
   url: string | null;
   relatedExperienceId?: string | null;
@@ -600,6 +602,7 @@ export type GalleryItem = {
   link?: string | null;
   span?: "tall" | "wide" | "normal";
   group?: "Portfolio" | "Archive";
+  needsReview?: boolean;
 };
 
 export const gallery: GalleryItem[] = [
