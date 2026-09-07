@@ -78,8 +78,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Tawfik Abeid | Law Student, Community Leader & Operations Intern" },
-      { name: "description", content: "Personal site of Tawfik Abeid: LLB candidate at Cairo University, community leader, and program & operations intern." },
+      { title: "Tawfik Abeid | Fresh Law Graduate, Community Leader & Legal Operations" },
+      { name: "description", content: "Personal site of Tawfik Abeid: fresh law graduate of Cairo University, community leader, and legal operations professional." },
       { name: "author", content: "Tawfik Abeid" },
       { property: "og:title", content: "Tawfik Abeid" },
       { property: "og:description", content: "Editorial portfolio of Tawfik Abeid." },

@@ -54,7 +54,7 @@ export function ExperienceDetailModal({ experience, onClose }: Props) {
               <div className="mt-8">
                 <p className="eyebrow text-muted-foreground">Gallery</p>
                 <div className="mt-3 grid grid-cols-2 gap-3">
-                  {(experience.gallery.length ? experience.gallery : [null, null]).map(
+                  {((experience.gallery?.length ? experience.gallery : [null, null]) as (string | null)[]).map(
                     (src, i) =>
                       src ? (
                         <img
