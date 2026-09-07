@@ -13,9 +13,9 @@ import { Footer } from "@/components/site/Footer";
 import { PhotoBand } from "@/components/site/PhotoBand";
 import { images } from "@/data/portfolio";
 
-const title = "Tawfik Abeid | Law Student, Community Leader & Operations Intern";
+const title = "Tawfik Abeid | Fresh Law Graduate, Community Leader & Legal Operations";
 const description =
-  "Personal site of Tawfik Abeid: fourth-year LLB candidate at Cairo University, community leader, and program & operations intern based in Giza, Egypt.";
+  "Personal site of Tawfik Abeid: fresh law graduate of Cairo University (June 2026), community leader, and legal operations & compliance professional based in Giza, Egypt.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
