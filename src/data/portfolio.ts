@@ -61,7 +61,7 @@ export const media = {
   skillsEmpowerment: { image: m("cert-skills-empowerment.png") },
   career180Retail: { image: m("cert-career180-retail.jpg") },
   fondi: { image: m("1720459853784.jpeg") },
-  majlisMaster: { image: m("1787502197400.jpeg") },
+  majlisMaster: { image: m("majlis-badge-new.png") },
 };
 
 export const academicDocumentsPolicy =
