@@ -60,7 +60,7 @@ export const media = {
   alx: { image: m("cert-alx-aice.png") },
   skillsEmpowerment: { image: m("cert-skills-empowerment.png") },
   career180Retail: { image: m("cert-career180-retail.jpg") },
-  fondi: { image: m("cert-fondi-starter.jpg") },
+  fondi: { image: m("1720459853784.jpeg") },
   majlisMaster: { image: m("1787502197400.jpeg") },
 };
 
