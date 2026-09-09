@@ -42,12 +42,13 @@ function Index() {
         alt="Looking out from the Grand Egyptian Museum toward the Giza pyramids"
         caption="Grand Egyptian Museum, Giza — January 2026"
       />
-      <Affiliations />
       <Journey />
       <Education />
       <Credentials />
       <Gallery />
+      <Affiliations />
       <Skills />
+
       <Contact />
       <Footer />
     </main>

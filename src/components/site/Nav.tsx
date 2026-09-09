@@ -4,9 +4,10 @@ import { CV_URL } from "@/data/portfolio";
 
 const links = [
   { label: "About", href: "#about" },
-  { label: "Journey", href: "#journey" },
-  { label: "Education", href: "#education" },
+  { label: "Impact", href: "#journey" },
+  { label: "Legal & Academic", href: "#education" },
   { label: "Credentials", href: "#credentials" },
+
   { label: "Gallery", href: "#gallery" },
   { label: "Contact", href: "#contact" },
 ];

@@ -6,10 +6,11 @@ export function Education() {
     <section id="education" className="border-b border-border bg-background">
       <div className="mx-auto max-w-[1400px] px-5 py-28 md:px-10 md:py-44">
         <Reveal>
-          <p className="eyebrow text-muted-foreground">Education</p>
+          <p className="eyebrow text-muted-foreground">Legal &amp; academic background</p>
           <h2 className="display-h2 mt-8 max-w-[20ch]">
-            Legal study, continued in short courses.
+            Legal study, continued in international programmes.
           </h2>
+
         </Reveal>
 
         <ol className="mt-20 border-t border-border md:mt-28">
