@@ -38,14 +38,16 @@ export function Hero() {
             className="animate-reveal mt-6 max-w-md text-sm text-ivory/75 md:text-base"
             style={{ animationDelay: "0.45s" }}
           >
-            Fresh Law Graduate · Community Leader · Legal Operations &amp; Compliance
+            Law Graduate · Community Leader &amp; Event Coordinator
           </p>
           <p
             className="animate-reveal mt-6 max-w-xl font-serif text-[clamp(1.15rem,2.3vw,1.75rem)] leading-snug text-ivory italic"
             style={{ animationDelay: "0.6s" }}
           >
-            “Building through law, leadership, and meaningful collaboration.”
+            “Bridging legal literacy, community leadership, and impactful event
+            operations.”
           </p>
+
 
           <div
             className="animate-reveal mt-10 flex flex-wrap items-center gap-3"

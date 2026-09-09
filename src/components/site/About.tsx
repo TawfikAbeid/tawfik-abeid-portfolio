@@ -8,7 +8,7 @@ export function About() {
         <Reveal>
           <p className="eyebrow text-muted-foreground">About</p>
           <h2 className="display-h2 mt-10 max-w-[24ch]">
-            A focused start, built through people, purpose, and progress.
+            Law, community leadership, and event operations in one practice.
           </h2>
         </Reveal>
 
@@ -25,20 +25,25 @@ export function About() {
           <Reveal delay={0.12} className="md:pt-10">
             <div className="space-y-8 text-[1.0625rem] leading-[1.85] text-foreground/80">
               <p className="font-serif text-[clamp(1.35rem,2.2vw,1.95rem)] leading-[1.35] text-foreground italic">
-                Tawfik is a fresh law graduate of Cairo University Faculty of Law,
-                graduated in June 2026.
+                Tawfik Abeid is a Cairo University Law Graduate (LLB, Class of 2026) and
+                active Community Leader based in Giza, Egypt.
               </p>
               <p>
-                His studies centred on legal research, civil procedure, and contract law — the
-                slower, more careful side of the discipline.
+                He has built a solid track record in leading community initiatives and
+                managing complex event operations. Currently serving as the Aspire
+                Community Leader for Giza, Tawfik’s experience spans coordinating
+                high-stakes operations at the Harvard Alumni Summit MEA (as Speaker
+                Liaison), contributing to multiple RiseUp Summits, and driving ground
+                operations for regional expos.
               </p>
               <p>
-                Alongside his degree, he takes part in international leadership programmes and
-                community leadership, and works in program operations, customer-facing roles,
-                and event coordination. The through-line is collaboration: doing useful work
-                with other people, reliably.
+                Grounded in civil law and procedural research, Tawfik leverages his
+                analytical legal mindset alongside strong interpersonal skills to
+                coordinate international programs, build resilient communities, and
+                deliver seamless operational execution.
               </p>
             </div>
+
 
             <dl className="mt-20 grid gap-x-10 gap-y-10 border-t border-border pt-10 sm:grid-cols-3">
               {[

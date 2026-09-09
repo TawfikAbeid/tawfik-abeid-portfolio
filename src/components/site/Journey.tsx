@@ -12,10 +12,11 @@ export function Journey() {
     <section id="journey" className="grain border-b border-white/10 bg-ink">
       <div className="relative z-10 mx-auto max-w-[1400px] px-5 py-32 md:px-10 md:py-52">
         <Reveal>
-          <p className="eyebrow text-lime">Career journey</p>
+          <p className="eyebrow text-lime">Core impact &amp; leadership</p>
           <h2 className="display-h2 mt-10 max-w-[18ch] text-ivory">
-            A chronological record, most recent first.
+            Leadership and event operations, most recent first.
           </h2>
+
         </Reveal>
 
         <ol className="relative mt-24 md:mt-36 md:pl-3">
