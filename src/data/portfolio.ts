@@ -601,7 +601,7 @@ export const credentials: Credential[] = [
     category: "Leadership",
     credentialType: "Certificate of Leadership",
     image: media.genseaCleanup.image,
-    url: null,
+    url: "https://www.linkedin.com/in/tawfikabeid/overlay/Certifications/122355797/treasury/?profileId=ACoAAD5m3kUBYpfyoPijavkPH_8tYf98L97DasE",
   },
 ];
 
