@@ -54,6 +54,7 @@ export const media = {
   },
   mint: { image: m("cert-mint-ambassador.jpg"), pdf: "/media/cert-mint-ambassador.pdf" },
   gensea: { image: m("cert-gensea.png") },
+  genseaCleanup: { image: m("cert-gensea-cleanup-leadership.png") },
   eyouth: { image: m("cert-eyouth-blockchain.png") },
   scholarx: { image: m("cert-scholarx-eu-opportunities.png") },
   sasLiteracy: { image: m("badge-sas-data-literacy.png") },
@@ -591,6 +592,15 @@ export const credentials: Credential[] = [
     category: "Legal & International",
     credentialType: "Certificate of Participation",
     image: media.gensea.image,
+    url: null,
+  },
+  {
+    title: "GenSea Cleanup Challenge — Certificate of Leadership",
+    issuer: "GenSea × EarthEcho International",
+    date: "September 2026",
+    category: "Leadership",
+    credentialType: "Certificate of Leadership",
+    image: media.genseaCleanup.image,
     url: null,
   },
 ];
