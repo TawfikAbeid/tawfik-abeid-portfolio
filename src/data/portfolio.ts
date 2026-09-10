@@ -104,7 +104,7 @@ export const education: EducationEntry[] = [
   },
 ];
 
-export const CV_URL = "/media/Tawfik_Abeid_CV_2v.docx.pdf";
+export const CV_URL = "/__l5e/assets-v1/c65f4cac-1003-4bca-aad5-c968e589017e/Tawfik_Abeid_CV_2v.pdf";
 
 export type ExperienceKind =
   | "Volunteer"
