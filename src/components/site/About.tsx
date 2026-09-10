@@ -29,18 +29,16 @@ export function About() {
                 active Community Leader based in Giza, Egypt.
               </p>
               <p>
-                He has built a solid track record in leading community initiatives and
-                managing complex event operations. Currently serving as the Aspire
-                Community Leader for Giza, Tawfik’s experience spans coordinating
-                high-stakes operations at the Harvard Alumni Summit MEA (as Speaker
-                Liaison), contributing to multiple RiseUp Summits, and driving ground
-                operations for regional expos.
+                He built hands-on experience in community leadership and event
+                coordination through successive roles: Community Leader at Aspire
+                Institute (Giza), Speaker Liaison at the Harvard Alumni Summit MEA,
+                and a two-time volunteer at RiseUp Summit.
               </p>
               <p>
-                Grounded in civil law and procedural research, Tawfik leverages his
-                analytical legal mindset alongside strong interpersonal skills to
-                coordinate international programs, build resilient communities, and
-                deliver seamless operational execution.
+                His passion is connecting his legal background with the organisational
+                and communication skills he developed through direct work with
+                international communities and events — with community leadership as
+                the driver and law as the academic foundation.
               </p>
             </div>
 
